@@ -1,0 +1,245 @@
+/* -------------------------------------
+   Stili globali
+---------------------------------------- */
+body {
+    background-color: black;
+    background-image: linear-gradient(to right, black, rgb(28, 12, 66));
+}
+
+/* -------------------------------------
+   Stili del titolo
+---------------------------------------- */
+.titolo {
+    color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke: 2px rgb(0, 255, 0); /* Contorno del testo per WebKit (Safari, Chrome) */
+    font-size: 100px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow: -7px 7px 15px rgba(0, 255, 0, 0.425);
+    transition: text-shadow 0.9s ease, -webkit-text-stroke 0.9s ease;
+}
+
+.titolo:hover {
+    transition-delay: 0.1s;
+    text-shadow: 0px 0px 8px rgb(76, 0, 255);
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.712);
+    
+}
+
+hr {
+    border: none; /* Rimuove il bordo predefinito */
+    height: 2px; /* Altezza della linea */
+    border-radius: 50px;
+    background-color: lightgreen; /* Colore della linea */
+    margin: 20px auto; /* Margine sopra e sotto, centrato orizzontalmente */
+}
+
+/* -------------------------------------
+   Stili del testo generale
+---------------------------------------- */
+.txt {
+    color: rgb(204, 204, 204);
+    font-size: 25px;
+    letter-spacing: 0.7px;
+    font-family: 'Roboto Mono', monospace;
+    text-align: justify;
+    text-shadow: 0px 0px 5px black;
+    line-height: 1.6;
+    margin: 40px;
+    padding: 10px;
+}
+
+.importante {
+    color: rgb(120, 61, 255);
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+    font-family: 'Roboto Mono', monospace;
+    text-align: justify;
+    text-shadow: 0px 0px 5px black;
+    line-height: 1.6;
+}
+
+/* -------------------------------------
+   Stili dei link
+---------------------------------------- */
+.links {
+    color: rgb(76, 0, 255);
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Roboto Mono', monospace;
+    text-shadow: 0px 5px 10px black;
+    line-height: 1.5;
+    letter-spacing: 3px;
+    transition: font-size 0.2s ease, color 0.5s ease;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* -------------------------------------
+   Stili dei link quando si passa con il mouse
+---------------------------------------- */
+.links a {
+    display: block;
+    margin: 0 40px;
+    width: fit-content;
+    text-align: center;
+    text-decoration: none;
+}
+
+.links:hover {
+    font-size: 47px;
+    transition-delay: 0.1s;
+    text-shadow: 0px 5px 10px black;
+    color: lightgreen;
+}
+
+/* -------------------------------------
+   Stili dei collegamenti
+---------------------------------------- */
+.collegamenti {
+    color: lightgreen;
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-family: 'Roboto Mono', monospace;
+    text-align: justify;
+    text-shadow: 0px 0px 10px black;
+    line-height: 1.6;
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+
+.collegamenti:hover {
+    transition-delay: 0.1s;
+    color: lightcoral;
+}
+
+/* -------------------------------------
+   Stili per le liste
+---------------------------------------- */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    background-color: rgb(28, 12, 66);
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.705);
+    transition: background-color 0.2s ease;
+}
+
+/* -------------------------------------
+   Stili per i box guida
+---------------------------------------- */
+.guide {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    color: lightgray;
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    text-shadow: 0px 0px 5px black;
+    line-height: 1.6;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.705);
+    margin-bottom: 20px;
+}
+
+.guide:hover {
+    transition-delay: 0.1s;
+    background-color: rgb(76, 0, 255);
+}
+
+/* -------------------------------------
+   Stili per l'indice
+---------------------------------------- */
+.index {
+    color: lightgreen;
+    font-weight: bold;
+    font-size: 35px;
+    letter-spacing: 2px;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    text-shadow: 0px 0px 5px rgb(0, 0, 0);
+    line-height: 1.6;
+    margin: 20px;
+    padding: 10px;
+}
+
+.indice {
+    max-width: 35%;
+    margin: 0 auto;
+    padding: 10px;
+    color: lightgray;
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    text-shadow: 0px 0px 5px black;
+    line-height: 1.6;
+    transition: box-shadow 0.9s ease;
+    cursor: pointer;
+    border-radius: 30px;
+    box-shadow: 0 0px 15px rgba(107, 255, 88, 0.548);
+    margin-bottom: 20px;
+}
+
+.indice:hover {
+    transition-delay: 0.1s;
+    box-shadow: 0 0px 15px rgb(76, 0, 255);
+}
+
+.indice ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.indice li {
+    margin-bottom: 13px;
+    transition: background-color 0.2s ease;
+}
+
+.indice li:hover {
+    transition-delay: 0.1s;
+    background-color: rgb(76, 0, 255)
+}
+
+.indice a {
+    color: lightgray; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+
+.par {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    color: lightgray;
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    text-shadow: 0px 0px 5px black;
+    line-height: 1.6;
+    transition: box-shadow 0.9s ease;
+    cursor: pointer;
+    border-radius: 30px;
+    box-shadow: 0 0px 20px rgb(76, 0, 255);
+    margin-bottom: 20px;
+}
+
