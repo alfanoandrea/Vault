@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <title>
+            Alfanowski - Guide
+        </title>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="../images/hacker.ico">
+        <link rel="stylesheet" type="text/css" href="../style.css">
+    </head>
+
+    <body>
+        <h1 class="titolo">
+            [Alfanowski's WebSite]
+        </h1>
+        <hr>
+        <div class="links">
+            <a class="links" href="../pages/guide.html">[GUIDE]</a>
+            <a class="links" href="../index.html">[HOME]</a>
+        </div>
+        <p class="txt"><br></p>
+        <div class="indice">
+            <p class="index">INDEX</p>
+            <ul>
+                <a href="#introduzione"><li>Introduzione</li></a>
+                <a href="#requisiti"><li>Requisiti</li></a>
+                <a href="#installazione"><li>Installazione di VirtualBox</li></a>
+                <a href="#creazione"><li>Creazione di una macchina virtuale</li></a>
+                <a href="#configurazione"><li>Configurazione della macchina virtuale</li></a>
+                <a href="#installazione-sistema"><li>Installazione del sistema operativo</li></a>
+            </ul>
+        </div>
+        <p class="txt"><br></p>
+        <p class="txt"><br></p>
+        <div id="introduzione" class="par">
+            <p class="index">Introduzione</p>
+            <p class="txt">
+                Creare macchine virtuali è un modo efficace per eseguire più sistemi operativi sullo stesso computer senza la necessità di partizionare il disco fisico. In questa guida, ti mostrerò come creare e configurare macchine virtuali utilizzando VirtualBox, un software di virtualizzazione gratuito e open-source.
+            </p>
+        </div>
+        <p class="txt"><br></p>
+        <p class="txt"><br></p>
+        <div id="requisiti" class="par">
+            <p class="index">Requisiti</p>
+            <div class="txt">
+                <p><span class="importante">Sistema operativo host:</span> Windows, macOS, Linux.</p>
+                <p><span class="importante">Memoria (RAM):</span> Almeno 4 GB, consigliati 8 GB o più.</p>
+                <p><span class="importante">Spazio su disco:</span> Almeno 20 GB di spazio libero per ogni macchina virtuale.</p>
+                <p><span class="importante">VirtualBox:</span> Scaricabile da <a class="collegamenti" href="https://www.virtualbox.org">virtualbox.org</a>.</p>
+                <p><span class="importante">File ISO del sistema operativo:</span> Scaricabile dal sito ufficiale del sistema operativo che desideri installare.</p>
+            </div>
+        </div>
+        <p class="txt"><br></p>
+        <p class="txt"><br></p>
+        <div id="installazione" class="par">
+            <p class="index">Installazione di VirtualBox</p>
+            <div class="txt">
+                <p><span class="importante">Scarica VirtualBox:</span><br>
+                Vai su <a class="collegamenti" href="https://www.virtualbox.org">virtualbox.org</a> e scarica l'ultima versione di VirtualBox per il tuo sistema operativo.</p>
+                
+                <p><span class="importante">Installa VirtualBox:</span><br>
+                Esegui il file di installazione e segui le istruzioni a schermo per completare l'installazione.</p>
+            </div>
+        </div>
+        <p class="txt"><br></p>
+        <p class="txt"><br></p>
+        <div id="creazione" class="par">
+            <p class="index">Creazione di una macchina virtuale</p>
+            <div class="txt">
+                <p><span class="importante">Apri VirtualBox:</span><br>
+                Avvia VirtualBox dal menu Start (Windows) o dalla cartella Applicazioni (macOS).</p>
+                
+                <p><span class="importante">Crea una nuova macchina virtuale:</span><br>
+                Clicca su "Nuova" per avviare il processo di creazione della macchina virtuale.</p>
+                
+                <p><span class="importante">Nome e tipo di sistema operativo:</span><br>
+                Inserisci un nome per la macchina virtuale e seleziona il tipo e la versione del sistema operativo che desideri installare (ad esempio, "Linux" e "Ubuntu (64-bit)"). Clicca su "Avanti".</p>
+                
+                <p><span class="importante">Assegna la memoria:</span><br>
+                Seleziona la quantità di RAM da assegnare alla macchina virtuale. È consigliato almeno 2 GB, ma dipende dalle risorse del tuo sistema host. Clicca su "Avanti".</p>
+                
+                <p><span class="importante">Crea un disco rigido virtuale:</span><br>
+                Seleziona "Crea un disco rigido virtuale ora" e clicca su "Crea".</p>
+                
+                <p><span class="importante">Tipo di file del disco rigido:</span><br>
+                Scegli "VDI (VirtualBox Disk Image)" e clicca su "Avanti".</p>
+                
+                <p><span class="importante">Allocazione dinamica o dimensione fissa:</span><br>
+                Seleziona "Allocato dinamicamente" per risparmiare spazio su disco. Clicca su "Avanti".</p>
+                
+                <p><span class="importante">Dimensione del disco rigido:</span><br>
+                Imposta la dimensione del disco rigido virtuale (almeno 20 GB) e clicca su "Crea".</p>
+            </div>
+        </div>
+        <p class="txt"><br></p>
+        <p class="txt"><br></p>
+        <div id="configurazione" class="par">
+            <p class="index">Configurazione della macchina virtuale</p>
+            <div class="txt">
+                <p><span class="importante">Seleziona la macchina virtuale:</span><br>
+                Dopo aver creato la macchina virtuale, selezionala nell'elenco di VirtualBox e clicca su "Impostazioni".</p>
+                
+                <p><span class="importante">Configura il sistema:</span><br>
+                Nella scheda "Sistema", assicurati che la memoria RAM e i processori siano configurati correttamente. Puoi aumentare il numero di processori se il tuo sistema host lo supporta.</p>
+                
+                <p><span class="importante">Configura la rete:</span><br>
+                Nella scheda "Rete", scegli "Scheda con bridge" per permettere alla macchina virtuale di avere un proprio indirizzo IP nella tua rete.</p>
+                
+                <p><span class="importante">Aggiungi l'immagine ISO:</span><br>
+                Nella scheda "Archiviazione", clicca sull'icona del disco accanto a "Controller IDE" e seleziona "Scegli un file di disco ottico virtuale". Seleziona l'immagine ISO del sistema operativo che hai scaricato.</p>
+            </div>
+        </div>
+        <p class="txt"><br></p>
+        <p class="txt"><br></p>
+        <div id="installazione-sistema" class="par">
+            <p class="index">Installazione del sistema operativo</p>
+            <div class="txt">
+                <p><span class="importante">Avvia la macchina virtuale:</span><br>
+                Clicca su "Avvia" per avviare la macchina virtuale. Verrà caricato il programma di installazione del sistema operativo dall'immagine ISO.</p>
+                
+                <p><span class="importante">Segui le istruzioni di installazione:</span><br>
+                Segui le istruzioni sullo schermo per installare il sistema operativo sulla macchina virtuale. Questo processo è identico all'installazione su un computer fisico.</p>
+                
+                <p><span class="importante">Rimuovi l'immagine ISO:</span><br>
+                Dopo l'installazione, torna alle impostazioni della macchina virtuale, vai alla scheda "Archiviazione" e rimuovi l'immagine ISO per evitare di riavviare l'installazione ad ogni avvio.</p>
+                
+                <p><span class="importante">Riavvia la macchina virtuale:</span><br>
+                Riavvia la macchina virtuale e goditi il tuo nuovo sistema operativo virtualizzato!</p>
+            </div>
+        </div>
+        <p class="txt"><br></p>
+    </body>
+</html>

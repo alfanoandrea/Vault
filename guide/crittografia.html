@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <title>
+            Alfanowski - Guide
+        </title>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="../images/hacker.ico">
+        <link rel="stylesheet" type="text/css" href="../style.css">
+    </head>
+
+    <body>
+        <h1 class="titolo">
+            [Alfanowski's WebSite]
+        </h1>
+        <hr>
+        <div class="links">
+            <a class="links" href="../pages/guide.html">[GUIDE]</a>
+            <a class="links" href="../index.html">[HOME]</a>
+        </div>
+        <p class="txt"><br></p>
+        <div class="indice">
+            <p class="index">INDEX</p>
+            <ul>
+                <a href="#introduzione"><li>Introduzione</li></a>
+                <a href="#algoritmi"><li>Algoritmi di Crittografia</li></a>
+                <a href="#esempi"><li>Esempi di Crittografia e Decrittografia</li></a>
+                <a href="#conclusione"><li>Conclusione</li></a>
+            </ul>
+        </div>
+        <p class="txt"><br></p>
+        <p class="txt"><br></p>
+        <div id="introduzione" class="par">
+            <p class="index">Introduzione</p>
+            <p class="txt">
+                La crittografia è una tecnica utilizzata per proteggere le informazioni trasformandole in un formato illeggibile per chiunque non possieda la chiave per decrittarle. È uno strumento fondamentale per garantire la riservatezza e l'integrità dei dati in molte applicazioni, dalle comunicazioni online alle transazioni finanziarie.
+            </p>
+            <p class="txt">
+                Esistono due principali tipi di crittografia: simmetrica e asimmetrica. Nella crittografia simmetrica, la stessa chiave viene utilizzata sia per cifrare che per decifrare i dati. Nella crittografia asimmetrica, vengono utilizzate due chiavi diverse: una chiave pubblica per cifrare e una chiave privata per decifrare.
+            </p>
+        </div>
+        <p class="txt"><br></p>
+        <p class="txt"><br></p>
+        <div id="algoritmi" class="par">
+            <p class="index">Algoritmi di Crittografia</p>
+            <div class="txt">
+                <p><span class="importante">AES (Advanced Encryption Standard):</span><br>
+                AES è uno degli algoritmi di crittografia simmetrica più utilizzati al mondo. È veloce ed efficiente, e viene utilizzato in molte applicazioni di sicurezza informatica, come il cifratura di file e la protezione delle comunicazioni online.</p>
+                
+                <p><span class="importante">RSA (Rivest-Shamir-Adleman):</span><br>
+                RSA è un algoritmo di crittografia asimmetrica ampiamente utilizzato per la cifratura di dati sensibili e la firma digitale. Utilizza una coppia di chiavi, una pubblica e una privata, per garantire la sicurezza delle informazioni.</p>
+                
+                <p><span class="importante">DES (Data Encryption Standard):</span><br>
+                DES è un algoritmo di crittografia simmetrica che, nonostante la sua obsolescenza, ha gettato le basi per molti altri algoritmi di crittografia moderna.</p>
+                
+                <p><span class="importante">Blowfish:</span><br>
+                Blowfish è un algoritmo di crittografia simmetrica noto per la sua velocità e sicurezza. È spesso utilizzato per proteggere dati in applicazioni software e hardware.</p>
+                
+                <p><span class="importante">ECC (Elliptic Curve Cryptography):</span><br>
+                ECC è un algoritmo di crittografia asimmetrica che offre un alto livello di sicurezza con chiavi di dimensioni più ridotte rispetto ad altri algoritmi, come RSA.</p>
+            </div>
+        </div>
+        <p class="txt"><br></p>
+        <p class="txt"><br></p>
+        <div id="esempi" class="par">
+            <p class="index">Esempi di Crittografia e Decrittografia</p>
+            <div class="txt">
+                <p><span class="importante">Crittografia con AES:</span><br>
+                Immagina di voler cifrare il messaggio "Ciao Mondo" utilizzando AES con una chiave segreta. Ecco un esempio di come potrebbe essere fatto in Python:</p>
+                <pre class="codice"><code>
+                    
+    <span class="keyword">import</span> base64
+    <span class="keyword">from</span> Crypto.Cipher <span class="keyword">import</span> AES
+    <span class="keyword">from</span> Crypto.Util.Padding <span class="keyword">import</span> pad, unpad
+    
+    <span class="comment"># Chiave e messaggio</span>
+    <span class="variable">chiave</span> = b'LaChiaveSegreta!'
+    <span class="variable">messaggio</span> = b'Ciao Mondo'
+    
+    <span class="comment"># Cifratura</span>
+    <span class="variable">cipher</span> = AES.<span class="function">new</span>(<span class="variable">chiave</span>, AES.<span class="variable">MODE_CBC</span>)
+    <span class="variable">ct_bytes</span> = <span class="variable">cipher</span>.<span class="function">encrypt</span>(pad(<span class="variable">messaggio</span>, AES.<span class="variable">block_size</span>))
+    <span class="variable">iv</span> = base64.<span class="function">b64encode</span>(<span class="variable">cipher</span>.<span class="variable">iv</span>).<span class="function">decode</span>(<span class="string">'utf-8'</span>)
+    <span class="variable">ct</span> = base64.<span class="function">b64encode</span>(<span class="variable">ct_bytes</span>).<span class="function">decode</span>(<span class="string">'utf-8'</span>)
+    <span class="function">print</span>(f<span class="string">"IV: {iv}"</span>)
+    <span class="function">print</span>(f<span class="string">"Testo Cifrato: {ct}"</span>)
+        
+    <span class="comment"># Decrittografia</span>
+    <span class="variable">iv</span> = base64.<span class="function">b64decode</span>(<span class="variable">iv</span>)
+    <span class="variable">ct</span> = base64.<span class="function">b64decode</span>(<span class="variable">ct</span>)
+    <span class="variable">cipher</span> = AES.<span class="function">new</span>(<span class="variable">chiave</span>, AES.<span class="variable">MODE_CBC</span>, <span class="variable">iv</span>)
+    <span class="variable">messaggio_decifrato</span> = unpad(<span class="variable">cipher</span>.<span class="function">decrypt</span>(<span class="variable">ct</span>), AES.<span class="variable">block_size</span>)
+    <span class="function">print</span>(f<span class="string">"Messaggio Decifrato: {messaggio_decifrato.decode('utf-8')}"</span>)
+                </code></pre>
+                <p>In questo esempio, il messaggio "Ciao Mondo" viene cifrato e decifrato utilizzando AES in modalità CBC.</p>
+                    
+                <p><span class="importante">Crittografia con RSA:</span><br>
+                    Ecco un esempio di come cifrare e decifrare un messaggio utilizzando RSA in Python:</p>
+                <pre class="codice"><code>
+    <span class="keyword">from</span> Crypto.PublicKey <span class="keyword">import</span> RSA
+    <span class="keyword">from</span> Crypto.Cipher <span class="keyword">import</span> PKCS1_OAEP
+    <span class="keyword">import</span> base64
+    
+    <span class="comment"># Genera una coppia di chiavi RSA</span>
+    <span class="variable">chiave</span> = RSA.<span class="function">generate</span>(<span class="number">2048</span>)
+    <span class="variable">chiave_privata</span> = <span class="variable">chiave</span>.<span class="function">export_key</span>()
+    <span class="variable">chiave_pubblica</span> = <span class="variable">chiave</span>.<span class="function">publickey</span>().<span class="function">export_key</span>()
+    
+    <span class="comment"># Cifratura</span>
+    <span class="variable">cipher</span> = PKCS1_OAEP.<span class="function">new</span>(RSA.<span class="function">import_key</span>(<span class="variable">chiave_pubblica</span>))
+    <span class="variable">messaggio</span> = b'Ciao Mondo'
+    <span class="variable">ct</span> = base64.<span class="function">b64encode</span>(<span class="variable">cipher</span>.<span class="function">encrypt</span>(<span class="variable">messaggio</span>)).<span class="function">decode</span>(<span class="string">'utf-8'</span>)
+    <span class="function">print</span>(f<span class="string">"Testo Cifrato: {ct}"</span>)
+        
+                </code></pre>
+            </div>
+        </div>
+        <p class="txt"><br></p>
+        <p class="txt"><br></p>
+    </body>
+</html>

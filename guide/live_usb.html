@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="it">
     <head>
         <title>
@@ -9,7 +10,7 @@
     </head>
 
     <body>
-        <h1 class = "titolo">
+        <h1 class="titolo">
             [Alfanowski's WebSite]
         </h1>
         <hr>
@@ -17,26 +18,84 @@
             <a class="links" href="../pages/guide.html">[GUIDE]</a>
             <a class="links" href="../index.html">[HOME]</a>
         </div>
-        <p class = "txt"><br></p>
+        <p class="txt"><br></p>
         <div class="indice">
             <p class="index">INDEX</p>
             <ul>
                 <a href="#introduzione"><li>Introduzione</li></a>
-                <a href="#requisiti"><li>Requisiti di sistema</li></a>
-                <a href="#download"><li>Installazione di Rufus</li></a>
-                <a href="#download"><li>Installazione di Balena Etcher</li></a>
-                <a href="#usb"><li>Testiamo l'unità live</li></a>
-                
+                <a href="#requisiti"><li>Requisiti</li></a>
+                <a href="#download"><li>Download del software necessario</li></a>
+                <a href="#creazione"><li>Creazione della chiavetta USB avviabile</li></a>
+                <a href="#boot"><li>Avvio da USB</li></a>
             </ul>
         </div>
-        
-
-
-
-        <p class = "txt">
-            qui scriverò la guida...  !!!
-        </p>
-        <p class = "txt"><br></p>
-        
+        <p class="txt"><br></p>
+        <p class="txt"><br></p>
+        <div id="introduzione" class="par">
+            <p class="index">Introduzione</p>
+            <p class="txt">
+                Creare una chiavetta USB avviabile è un passaggio fondamentale per installare un nuovo sistema operativo su un computer. In questa guida, ti mostrerò come farlo utilizzando diversi strumenti a seconda del sistema operativo che stai usando (Windows, macOS o Linux).
+            </p>
+        </div>
+        <p class="txt"><br></p>
+        <p class="txt"><br></p>
+        <div id="requisiti" class="par">
+            <p class="index">Requisiti</p>
+            <div class="txt">
+                <p><span class="importante">Chiavetta USB:</span> Almeno 8 GB di spazio.</p>
+                <p><span class="importante">File ISO del sistema operativo:</span> Scaricabile dal sito ufficiale del sistema operativo.</p>
+                <p><span class="importante">Software per creare USB avviabile:</span> Rufus per Windows, Balena Etcher per macOS e Linux.</p>
+            </div>
+        </div>
+        <p class="txt"><br></p>
+        <p class="txt"><br></p>
+        <div id="download" class="par">
+            <p class="index">Download del software necessario</p>
+            <div class="txt">
+                <p><span class="importante">Rufus (Windows):</span><br>
+                Vai su <a class="collegamenti" href="https://rufus.ie">rufus.ie</a> e scarica l'ultima versione.</p>
+                <p><span class="importante">Balena Etcher (macOS e Linux):</span><br>
+                Vai su <a class="collegamenti" href="https://www.balena.io/etcher/">balena.io/etcher</a> e scarica l'ultima versione.</p>
+            </div>
+        </div>
+        <p class="txt"><br></p>
+        <p class="txt"><br></p>
+        <div id="creazione" class="par">
+            <p class="index">Creazione della chiavetta USB avviabile</p>
+            <div class="txt">
+                <p><span class="importante">Windows con Rufus:</span></p>
+                <ol>
+                    <li>Inserisci la chiavetta USB nel computer.</li>
+                    <li>Apri Rufus.</li>
+                    <li>Seleziona la tua chiavetta USB sotto "Dispositivo".</li>
+                    <li>Clicca su "Seleziona" e scegli il file ISO del sistema operativo.</li>
+                    <li>Lascia le altre impostazioni predefinite e clicca su "START".</li>
+                    <li>Attendi il completamento del processo.</li>
+                </ol>
+                <p><span class="importante">macOS e Linux con Balena Etcher:</span></p>
+                <ol>
+                    <li>Inserisci la chiavetta USB nel computer.</li>
+                    <li>Apri Balena Etcher.</li>
+                    <li>Clicca su "Flash from file" e seleziona il file ISO del sistema operativo.</li>
+                    <li>Clicca su "Select target" e seleziona la tua chiavetta USB.</li>
+                    <li>Clicca su "Flash!" e attendi il completamento del processo.</li>
+                </ol>
+            </div>
+        </div>
+        <p class="txt"><br></p>
+        <p class="txt"><br></p>
+        <div id="boot" class="par">
+            <p class="index">Avvio da USB</p>
+            <div class="txt">
+                <ol>
+                    <li>Inserisci la chiavetta USB nel computer su cui vuoi installare il sistema operativo.</li>
+                    <li>Accendi il computer e accedi al BIOS/UEFI (solitamente premendo un tasto come F2, F12, DEL, ESC durante l'avvio, varia a seconda del produttore del computer).</li>
+                    <li>Configura l'ordine di avvio per avviare dal dispositivo USB.</li>
+                    <li>Salva e esci dal BIOS/UEFI.</li>
+                    <li>Segui le istruzioni sullo schermo per installare il sistema operativo.</li>
+                </ol>
+            </div>
+        </div>
+        <p class="txt"><br></p>
     </body>
 </html>

@@ -314,3 +314,56 @@ ul li {
 }
 
 
+
+/* -------------------------------------
+   Stili per i codici python
+---------------------------------------- */
+.codice {
+    background-color: #1e1e1ec4; /* Sfondo scuro */
+    border: 0px solid #1e1e1ec4; /* Bordo più scuro */
+    border-radius: 20px;
+    box-shadow: 0 0px 15px rgb(120, 61, 255);
+    padding: 5px;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #d4d4d4; /* Colore del testo principale */
+}
+
+.codice pre {
+    margin: 0;
+}
+
+/* Stili per la sintassi simile a VS Code */
+.codice .keyword {
+    color: #569cd6; /* Colore delle parole chiave */
+}
+
+.codice .string {
+    color: #ce9178; /* Colore delle stringhe */
+}
+
+.codice .comment {
+    color: #6a9955; /* Colore dei commenti */
+}
+
+.codice .function {
+    color: #dcdcaa; /* Colore delle funzioni */
+}
+
+.codice .variable {
+    color: #9cdcfe; /* Colore delle variabili */
+}
+
+.codice .number {
+    color: #b5cea8; /* Colore dei numeri */
+}
+
+.codice .operator {
+    color: #d7ba7d; /* Colore degli operatori */
+}
+
+.codice .punctuation {
+    color: #ffffff; /* Colore della punteggiatura */
+}

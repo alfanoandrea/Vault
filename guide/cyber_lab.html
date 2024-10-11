@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <title>
+            Alfanowski - Guide
+        </title>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="../images/hacker.ico">
+        <link rel="stylesheet" type="text/css" href="../style.css">
+    </head>
+
+    <body>
+        <h1 class="titolo">
+            [Alfanowski's WebSite]
+        </h1>
+        <hr>
+        <div class="links">
+            <a class="links" href="../pages/guide.html">[GUIDE]</a>
+            <a class="links" href="../index.html">[HOME]</a>
+        </div>
+        <p class="txt"><br></p>
+        <div class="indice">
+            <p class="index">INDEX</p>
+            <ul>
+                <a href="#introduzione"><li>Introduzione</li></a>
+                <a href="#requisiti"><li>Requisiti</li></a>
+                <a href="#installazione"><li>Installazione di VirtualBox</li></a>
+                <a href="#creazione"><li>Creazione delle macchine virtuali</li></a>
+                <a href="#configurazione"><li>Configurazione del laboratorio</li></a>
+            </ul>
+        </div>
+        <p class="txt"><br></p>
+        <p class="txt"><br></p>
+        <div id="introduzione" class="par">
+            <p class="index">Introduzione</p>
+            <p class="txt">
+                Creare un laboratorio di hacking con macchine virtuali è un ottimo modo per sperimentare tecniche di sicurezza informatica in un ambiente controllato. Questa guida ti mostrerà come configurare un laboratorio di hacking utilizzando VirtualBox, includendo l'installazione di diverse macchine virtuali che rappresentano sia i sistemi target che le macchine di attacco.
+            </p>
+        </div>
+        <p class="txt"><br></p>
+        <p class="txt"><br></p>
+        <div id="requisiti" class="par">
+            <p class="index">Requisiti</p>
+            <div class="txt">
+                <p><span class="importante">Sistema operativo host:</span> Windows, macOS, Linux.</p>
+                <p><span class="importante">Memoria (RAM):</span> Almeno 8 GB, consigliati 16 GB o più.</p>
+                <p><span class="importante">Spazio su disco:</span> Almeno 100 GB di spazio libero.</p>
+                <p><span class="importante">VirtualBox:</span> Scaricabile da <a class="collegamenti" href="https://www.virtualbox.org">virtualbox.org</a>.</p>
+                <p><span class="importante">File ISO dei sistemi operativi:</span> Scaricabili dai siti ufficiali dei sistemi operativi che desideri installare (es. Kali Linux, Metasploitable).</p>
+            </div>
+        </div>
+        <p class="txt"><br></p>
+        <p class="txt"><br></p>
+        <div id="installazione" class="par">
+            <p class="index">Installazione di VirtualBox</p>
+            <div class="txt">
+                <p><span class="importante">Scarica VirtualBox:</span><br>
+                Vai su <a class="collegamenti" href="https://www.virtualbox.org">virtualbox.org</a> e scarica l'ultima versione di VirtualBox per il tuo sistema operativo.</p>
+                
+                <p><span class="importante">Installa VirtualBox:</span><br>
+                Esegui il file di installazione e segui le istruzioni a schermo per completare l'installazione.</p>
+            </div>
+        </div>
+        <p class="txt"><br></p>
+        <p class="txt"><br></p>
+        <div id="creazione" class="par">
+            <p class="index">Creazione delle macchine virtuali</p>
+            <div class="txt">
+                <p><span class="importante">Crea le macchine virtuali:</span><br>
+                Segui la guida "<a class="collegamenti" href="virtual_machines.html">Come creare una Virtual Machine</a>" per creare le macchine virtuali necessarie. Assicurati di creare almeno una macchina virtuale con Kali Linux (per l'attacco) e una o più macchine target (es. Metasploitable, Windows, Linux).</p>
+            </div>
+        </div>
+        <p class="txt"><br></p>
+        <p class="txt"><br></p>
+        <div id="configurazione" class="par">
+            <p class="index">Configurazione del laboratorio</p>
+            <div class="txt">
+                <p><span class="importante">Configura la rete delle macchine virtuali:</span><br>
+                Nella scheda "Rete" delle impostazioni di ciascuna macchina virtuale, seleziona "Rete interna" per creare una rete isolata in cui tutte le macchine virtuali possono comunicare tra loro senza interferire con la rete esterna.</p>
+                
+                <p><span class="importante">Configura le risorse delle macchine virtuali:</span><br>
+                Assegna memoria RAM e CPU a ciascuna macchina virtuale in base alle risorse disponibili sul tuo sistema host. Ad esempio, assegna almeno 4 GB di RAM alla macchina virtuale Kali Linux.</p>
+                
+                <p><span class="importante">Installazione degli strumenti di hacking:</span><br>
+                Avvia la macchina virtuale Kali Linux e assicurati di avere tutti gli strumenti di hacking necessari installati, come Metasploit, Nmap, Wireshark, e altri strumenti di penetration testing.</p>
+                
+                <p><span class="importante">Configura le macchine target:</span><br>
+                Avvia le macchine target e assicurati che siano configurate correttamente. Ad esempio, su una macchina Metasploitable, assicurati che tutti i servizi vulnerabili siano attivi e accessibili.</p>
+                
+                <p><span class="importante">Testa la connessione:</span><br>
+                Verifica che tutte le macchine virtuali possano comunicare tra loro eseguendo un ping dalle macchine Kali Linux alle macchine target e viceversa. Questo garantirà che la rete interna sia configurata correttamente.</p>
+                
+                <p><span class="importante">Salva lo stato delle macchine virtuali:</span><br>
+                Una volta che tutte le macchine virtuali sono configurate e funzionanti, salva lo stato delle macchine in VirtualBox per poter riprendere facilmente il laboratorio in futuro.</p>
+            </div>
+        </div>
+        <p class="txt"><br></p>
+    </body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>
+        Alfanowski - Guida ad Aircrack-ng
+    </title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="../images/hacker.ico">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+    <h1 class="titolo">
+        [Alfanowski's WebSite]
+    </h1>
+    <hr>
+    <div class="links">
+        <a class="links" href="../pages/guide.html">[GUIDE]</a>
+        <a class="links" href="../index.html">[HOME]</a>
+    </div>
+    <p class="txt"><br></p>
+    <div class="indice">
+        <p class="index">INDEX</p>
+        <ul>
+            <a href="#introduzione"><li>Introduzione</li></a>
+            <a href="#installazione"><li>Installazione</li></a>
+            <a href="#modalita_monitor"><li>Modalità Monitor</li></a>
+            <a href="#monitoraggio"><li>Monitoraggio delle Reti</li></a>
+            <a href="#cattura"><li>Cattura dei Pacchetti</li></a>
+            <a href="#attacco"><li>Attacco WEP e WPA/WPA2</li></a>
+            <a href="#etica"><li>Etica e Legalità</li></a>
+            <a href="#conclusione"><li>Conclusione</li></a>
+        </ul>
+    </div>
+    <p class="txt"><br></p>
+
+    <div id="introduzione" class="par">
+        <p class="index">Introduzione</p>
+        <p class="txt">
+            Aircrack-ng è una suite di strumenti progettati per la valutazione della sicurezza delle reti Wi-Fi. Questa guida fornisce una panoramica su come installare e utilizzare Aircrack-ng per testare la sicurezza delle reti wireless.
+        </p>
+    </div>
+    <p class="txt"><br></p>
+
+    <div id="installazione" class="par">
+        <p class="index">Installazione</p>
+        <div class="txt">
+            <p>
+                Per installare Aircrack-ng, utilizza i seguenti comandi, a seconda della tua distribuzione Linux:
+            </p>
+            <pre class="codice"><code>
+    # Ubuntu
+    sudo apt update
+    sudo apt install aircrack-ng
+
+    # Fedora
+    sudo dnf install aircrack-ng
+            </code></pre>
+        </div>
+    </div>
+    <p class="txt"><br></p>
+
+    <div id="modalita_monitor" class="par">
+        <p class="index">Modalità Monitor</p>
+        <div class="txt">
+            <p>
+                Per utilizzare Aircrack-ng, è necessario mettere la scheda di rete in modalità monitor con il comando:
+            </p>
+            <pre class="codice"><code>
+    sudo airmon-ng start wlan0
+            </code></pre>
+            <p>
+                *Nota: Sostituisci <code>wlan0</code> con il nome della tua interfaccia di rete.*
+            </p>
+        </div>
+    </div>
+    <p class="txt"><br></p>
+
+    <div id="monitoraggio" class="par">
+        <p class="index">Monitoraggio delle Reti</p>
+        <div class="txt">
+            <p>
+                Utilizza <code>airodump-ng</code> per scansionare le reti Wi-Fi disponibili:
+            </p>
+            <pre class="codice"><code>
+    sudo airodump-ng wlan0mon
+            </code></pre>
+        </div>
+    </div>
+    <p class="txt"><br></p>
+
+    <div id="cattura" class="par">
+        <p class="index">Cattura dei Pacchetti</p>
+        <div class="txt">
+            <p>
+                Dopo aver individuato una rete, puoi catturare i pacchetti utilizzando:
+            </p>
+            <pre class="codice"><code>
+    sudo airodump-ng --bssid [BSSID] -c [CANALE] -w [FILE] wlan0mon
+            </code></pre>
+            <p>
+                *Dove [BSSID] è l'indirizzo MAC del router, [CANALE] è il canale della rete e [FILE] è il nome del file di output.*
+            </p>
+        </div>
+    </div>
+    <p class="txt"><br></p>
+
+    <div id="attacco" class="par">
+        <p class="index">Attacco WEP e WPA/WPA2</p>
+        <div class="txt">
+            <p>
+                Per attaccare reti WEP, utilizza:
+            </p>
+            <pre class="codice"><code>
+    sudo aireplay-ng -1 0 -e [ESSID] -a [BSSID] wlan0mon
+            </code></pre>
+            <p>
+                Dopo aver catturato abbastanza pacchetti, utilizza <code>aircrack-ng</code> per decifrare la chiave:
+            </p>
+            <pre class="codice"><code>
+    aircrack-ng [FILE].cap
+            </code></pre>
+            <p>
+                Per reti WPA/WPA2, cattura l'handshake e utilizza un file di dizionario:
+            </p>
+            <pre class="codice"><code>
+    aircrack-ng -w [DIZIONARIO] [FILE].cap
+            </code></pre>
+        </div>
+    </div>
+    <p class="txt"><br></p>
+
+    <div id="etica" class="par">
+        <p class="index">Etica e Legalità</p>
+        <div class="txt">
+            <p>
+                È fondamentale utilizzare Aircrack-ng solo su reti per le quali hai ricevuto il permesso di testare la sicurezza. Accedere a reti senza autorizzazione è illegale e contro l'etica.
+            </p>
+        </div>
+    </div>
+    <p class="txt"><br></p>
+
+    <div id="conclusione" class="par">
+        <p class="index">Conclusione</p>
+        <div class="txt">
+            <p>
+                Aircrack-ng è uno strumento potente per la valutazione della sicurezza delle reti Wi-Fi. Utilizzalo in modo responsabile per migliorare le tue competenze nel campo della cybersecurity.
+            </p>
+        </div>
+    </div>
+    <p class="txt"><br></p>
+</body>
+</html>
