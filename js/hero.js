@@ -1,7 +1,6 @@
 document.body.style.background = "url('images/background.gif') no-repeat center center fixed";
 document.body.style.backgroundSize = "cover";
 document.body.style.position = "relative";
-document.body.style.overflow = "hidden"; // Impedisce lo scorrimento
 
 const overlay = document.createElement('div');
 overlay.style.position = "absolute";

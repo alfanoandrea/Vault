@@ -7,7 +7,7 @@ async function fetchRSS() {
         const xmlDoc = parser.parseFromString(data.contents, 'text/xml');
         const items = xmlDoc.getElementsByTagName('item');
         let newsHTML = '';
-        for (let i = 0; i <  Math.min(items.length, 7); i++) {
+        for (let i = 0; i <  Math.min(items.length, 3); i++) {
             const title = items[i].getElementsByTagName('title')[0].textContent;
             const link = items[i].getElementsByTagName('link')[0].textContent;
             const pubDate = items[i].getElementsByTagName('pubDate')[0].textContent;

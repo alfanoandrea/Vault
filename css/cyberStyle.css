@@ -1,7 +1,7 @@
 /* ================== FONT E TEMA GENERALE ================== */
 body.cyberpunk {
     font-family: 'Orbitron', sans-serif;
-    background: #0f0f0f00 url('images/cyberpunk-bg.jpg') no-repeat center center fixed;
+    background: #0f0f0f00 url('images/background.gif') no-repeat center center fixed;
     background-size: cover;
     color: #00ffcc;
     margin: 0;
@@ -302,7 +302,7 @@ body.cyberpunk {
         background-attachment: fixed; /* Impedisce lo scorrimento dell'immagine di sfondo */
         background-size: cover; /* Adatta l'immagine di sfondo allo schermo */
     }
-    
+
     .navbar {
         flex-direction: column;
         align-items: flex-start;
