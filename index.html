@@ -1,34 +1,68 @@
+<!DOCTYPE html>
 <html lang="it">
     <head>
-        <title>
-            Alfanowski
-        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Meta tag viewport -->
+        <title>Alfanowski</title>
         <meta charset="UTF-8">
         <link rel="icon" type="image/x-icon" href="images/hacker.ico">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="script.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/cyberStyle.css">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="script.js" defer></script>
     </head>
 
-    <body>
-        <h1 class = "titolo">
-            [Alfanowski's WebSite]
-        </h1>
-        <hr>
-        <div class="links">
-            <a class="links" href="pages/about.html">[ABOUT]</a>
-            <a class="links" href="pages/projects.html">[PROJECTS]</a>
-            <a class="links" href="pages/guide.html">[GUIDE]</a>
-        </div>
+    <body class="cyberpunk">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-blurTransparent sticky-top">
+            <div class="container">
+              <div class="logo">[Alfanowski]</div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/about.html">ABOUT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/projects.html">PROJECTS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/guide.html">GUIDE</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#news-container">NEWS</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          
 
-        <p class="txt"><br></p>
-        <p class="txt"><br></p>
-        <div id="news-container" class="par2">
+        <header class="hero">
+            <h1 class="hero-title">
+                <div id="typed-container">
+                    <span id="typed-text"></span><span class="cursor">|</span>
+                </div>
+            </h1>
+            <p class="hero-subtitle">Dive into the World of Hacking.</p>
+            <a href="pages/projects.html" class="hero-button">Explore Projects</a>
+        </header>
+        
+
+        <!-- Content Section -->
+        <section id="news-container" class="news-section">
             <h2 class="index">Newspaper</h2>
             <ul class="news-list">
-                <div class="news-content"></div>
+                <li class="news-item">Breaking News: Cyberpunk 2077 update is live!</li>
+                <li class="news-item">New Hacking Tools Released - Check the Guide Section!</li>
+                <li class="news-item">Upcoming Projects - Stay Tuned!</li>
             </ul>
-        </div>
-        
-        
+        </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/hero.js"></script>
+        <script src="js/terminale.js"></script>
+        <script src="js/scroll.js"></script>
     </body>
 </html>
