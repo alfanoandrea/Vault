@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
     let backgroundImage;
 
     if (window.location.pathname.includes("about.html")) {
-        backgroundImage = "url('../images/about.gif')";
+        backgroundImage = "url('../images/about.webp')";
     } else {
-        backgroundImage = "url('images/background.gif')";
+        backgroundImage = "url('images/index.webp')";
     }
 
     document.body.style.background = `${backgroundImage} no-repeat center center fixed`;

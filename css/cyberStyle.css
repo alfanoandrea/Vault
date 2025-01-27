@@ -70,6 +70,8 @@ body.cyberpunk {
     border-radius: 15px;
     backdrop-filter: blur(3px); /* Aggiunge l'effetto di sfocatura */
     -webkit-backdrop-filter: blur(3px); /* Supporto per Safari */
+    max-width: 800px; /* Riduce la larghezza massima */
+    margin: 50px auto; /* Centra la sezione */
 }
 
 .hero-title {
@@ -114,7 +116,7 @@ body.cyberpunk {
 
 #typed-container {
     display: inline-block;
-    height: 4em; /* Altezza fissa per riservare spazio */
+    height: 3em; /* Altezza fissa per riservare spazio */
     vertical-align: top; /* Allinea il contenitore in alto */
 }
 
@@ -146,6 +148,10 @@ body.cyberpunk {
     position: relative;
     backdrop-filter: blur(3px); /* Aggiunge l'effetto di sfocatura */
     -webkit-backdrop-filter: blur(3px); /* Supporto per Safari */   
+    max-width: 800px; /* Riduce la larghezza massima */
+    margin: 50px auto; /* Centra la sezione */
+
+
 }
 
 .index {
@@ -299,14 +305,14 @@ body.cyberpunk {
     color: #ff00ff;
 }
 
-/* About Section */
+/* ================== ABOUT ================== */
 .about-section {
-    padding: 50px 20px;
+    padding: 100px 20px;
     background: rgba(0, 0, 0, 0.7);
     color: #0026ff;
     border-radius: 15px;
     box-shadow: 0 0 20px #ff00ff;
-    margin: 50px 0;
+    margin: 50px;
     max-width: 800px;
     margin: 50px auto; /* Centra la sezione */
 }
@@ -335,7 +341,7 @@ body.cyberpunk {
     color: #00ffcc;
 }
 
-/* Social Section */
+/* ================== SOCIAL ================== */
 .social-section {
     padding: 50px 20px;
     background: rgba(0, 0, 0, 0.7);
@@ -393,6 +399,10 @@ body.cyberpunk {
         font-size: 1.7rem;
     }
 
+    .navbar-toggler {
+        font-size: 1.5rem;
+    }
+
     .nav-links {
         flex-direction: column;
         gap: 15px;
@@ -400,6 +410,7 @@ body.cyberpunk {
 
     .hero {
         padding: 70px 30px;
+        margin: 20px;
     }
 
     .hero-title {
@@ -413,6 +424,34 @@ body.cyberpunk {
     .hero-button {
         font-size: 1.0rem;
         padding: 12px 20px;
+    }
+
+    .about-section, .social-section {
+        padding: 20px 20px;
+        margin: 20px 0;
+        max-width: 90%; /* Riduce la larghezza massima */
+        margin: 20px auto; /* Centra la sezione */
+    }
+
+    .about-section .index, .social-section .index {
+        font-size: 1.5rem;
+    }
+
+    .about-section .txt, .social-section .social-links a {
+        font-size: 1rem;
+    }
+
+    .footer-text {
+        font-size: 0.9rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links li {
+        margin: 5px 0;
     }
 
     .index {
@@ -445,6 +484,13 @@ body.cyberpunk {
         font-size: 2rem; /* Aggiungi questa regola per aumentare la dimensione del pulsante della navbar */
     }
 
+    .hero {
+        padding: 30px 20px;
+        margin: 10px;
+        margin-top: 50px;
+
+    }
+
     .hero-title {
         font-size: 2rem;
     }
@@ -456,6 +502,35 @@ body.cyberpunk {
     .hero-button {
         font-size: 0.8rem;
         padding: 10px 18px;
+    }
+
+    .about-section, .social-section, .news-section {
+        padding: 30px 10px;
+        margin: 20px 0;
+        max-width: 90%; /* Riduce la larghezza massima */
+        margin: 20px auto; /* Centra la sezione */
+        margin-top: 50px;
+    }
+
+    .about-section .index, .social-section .index {
+        font-size: 1.2rem;
+    }
+
+    .about-section .txt, .social-section .social-links a {
+        font-size: 0.9rem;
+    }
+
+    .footer-text {
+        font-size: 0.8rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links li {
+        margin: 5px 0;
     }
 
     .index {
