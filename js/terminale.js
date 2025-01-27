@@ -3,7 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (window.location.pathname.includes("about.html"))
         text = "Who is\nAlfanowski?";
     else if (window.location.pathname.includes("projects.html"))
-            text = "Alfanowski's\nToolkit";
+            text = "Alfanowski's\nRepository";
+    else if (window.location.pathname.includes("tools.html"))
+        text = "Alfanowski's\nToolkit";
     else 
         text = "Alfanowski's\nVault";
 

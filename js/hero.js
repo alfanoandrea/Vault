@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
     else if (window.location.pathname.includes("projects.html")) {
         backgroundImage = "url('../images/projects.webp')";
     }
+    else if (window.location.pathname.includes("tools.html")) {
+        backgroundImage = "url('../images/tools.webp')";
+    }
     else {
         backgroundImage = "url('images/index.webp')";
     }
