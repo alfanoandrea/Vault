@@ -3,7 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (window.location.pathname.includes("about.html")) {
         backgroundImage = "url('../images/about.webp')";
-    } else {
+    }
+    else if (window.location.pathname.includes("projects.html")) {
+        backgroundImage = "url('../images/projects.webp')";
+    }
+    else {
         backgroundImage = "url('images/index.webp')";
     }
 

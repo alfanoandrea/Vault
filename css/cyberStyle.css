@@ -28,6 +28,7 @@ body.cyberpunk {
     font-weight: 900;
     color: #00ffcc;
     text-transform: uppercase;
+    text-decoration: none; /* Rimuove la sottolineatura */
 }
 
 .logo-container {
@@ -308,13 +309,15 @@ body.cyberpunk {
 /* ================== ABOUT ================== */
 .about-section {
     padding: 100px 20px;
-    background: rgba(0, 0, 0, 0.7);
-    color: #0026ff;
+    background: rgba(0, 0, 0, 0.365);
+    color: #4f69ff;
     border-radius: 15px;
     box-shadow: 0 0 20px #ff00ff;
     margin: 50px;
     max-width: 800px;
     margin: 50px auto; /* Centra la sezione */
+    backdrop-filter: blur(3px); /* Aggiunge l'effetto di sfocatura */
+    -webkit-backdrop-filter: blur(3px); /* Supporto per Safari */
 }
 
 .about-section .index {
@@ -344,7 +347,7 @@ body.cyberpunk {
 /* ================== SOCIAL ================== */
 .social-section {
     padding: 50px 20px;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.342);
     color: #00ffcc;
     border-radius: 15px;
     box-shadow: 0 0 20px #00ffcc;
@@ -352,6 +355,8 @@ body.cyberpunk {
     max-width: 800px;
     margin: 50px auto; /* Centra la sezione */
     text-align: center;
+    backdrop-filter: blur(3px); /* Aggiunge l'effetto di sfocatura */
+    -webkit-backdrop-filter: blur(3px); /* Supporto per Safari */
 }
 
 .social-section .index {
@@ -385,6 +390,69 @@ body.cyberpunk {
 
 .social-section .social-links i {
     margin-right: 8px;
+}
+
+/* ================== PROJECTS ================== */
+.projects-section {
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.311);
+    color: #5670ff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #00ffcc;
+    margin: 50px 0;
+    max-width: 800px;
+    margin: 50px auto; /* Centra la sezione */
+    backdrop-filter: blur(3px); /* Aggiunge l'effetto di sfocatura */
+    -webkit-backdrop-filter: blur(3px); /* Supporto per Safari */
+
+}
+
+.projects-section .index {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 0 0 10px #00ffcc;
+}
+
+.projects-section .txt {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: justify;
+    text-shadow: 0 0 5px #00ffcc00;
+}
+
+.projects-section .collegamenti {
+    color: #ff00ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.projects-section .collegamenti:hover {
+    color: #00ffcc;
+}
+
+.project-list {
+    margin-top: 30px;
+}
+
+.project-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00ffcc;
+}
+
+.project-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px #7300ff;
+}
+
+.project-item p {
+    font-size: 1rem;
+    line-height: 1.4;
+    text-shadow: 0 0 3px #00ffcc46;
 }
 
 /* ================== RESPONSIVE DESIGN ================== */
@@ -461,6 +529,29 @@ body.cyberpunk {
     .news-item {
         font-size: 0.5rem;
         padding: 15px;
+    }
+
+    .projects-section {
+        padding: 30px 20px;
+        margin: 20px 0;
+        max-width: 90%; /* Riduce la larghezza massima */
+        margin: 20px auto; /* Centra la sezione */
+    }
+
+    .projects-section .index {
+        font-size: 1.5rem;
+    }
+
+    .projects-section .txt {
+        font-size: 1rem;
+    }
+
+    .project-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .project-item p {
+        font-size: 0.9rem;
     }
 }
 
@@ -540,5 +631,29 @@ body.cyberpunk {
     .news-item {
         font-size: 1rem;
         padding: 12px;
+    }
+
+    .projects-section {
+        padding: 20px 10px;
+        margin: 10px 0;
+        max-width: 90%; /* Riduce la larghezza massima */
+        margin: 10px auto; /* Centra la sezione */
+        margin-top: 50px;
+    }
+
+    .projects-section .index {
+        font-size: 1.2rem;
+    }
+
+    .projects-section .txt {
+        font-size: 0.9rem;
+    }
+
+    .project-item h3 {
+        font-size: 1rem;
+    }
+
+    .project-item p {
+        font-size: 0.8rem;
     }
 }

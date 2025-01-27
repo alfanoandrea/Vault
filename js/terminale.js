@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     let text;
-    if (window.location.pathname.includes("about.html")) {
+    if (window.location.pathname.includes("about.html"))
         text = "Who is\nAlfanowski?";
-    } else {
+    else if (window.location.pathname.includes("projects.html"))
+            text = "Alfanowski's\nToolkit";
+    else 
         text = "Alfanowski's\nVault";
-    }
 
     const typedText = document.getElementById("typed-text");
     const speed = 100; // Velocità di digitazione in ms
