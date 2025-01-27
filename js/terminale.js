@@ -1,5 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const text = "Alfanowski's\nVault";
+    let text;
+    if (window.location.pathname.includes("about.html")) {
+        text = "Who is\nAlfanowski?";
+    } else {
+        text = "Alfanowski's\nVault";
+    }
+
     const typedText = document.getElementById("typed-text");
     const speed = 100; // Velocità di digitazione in ms
     const pauseTime = 5000; // Pausa prima della cancellazione in ms
