@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
             text = "Alfanowski's\nRepository";
     else if (window.location.pathname.includes("tools.html"))
         text = "Alfanowski's\nToolkit";
+    else if (window.location.pathname.includes("guide.html"))
+        text = "Alfanowski's\nTutorials";
     else 
         text = "Alfanowski's\nVault";
 

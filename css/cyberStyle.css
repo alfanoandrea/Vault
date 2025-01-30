@@ -455,6 +455,68 @@ body.cyberpunk {
     text-shadow: 0 0 3px #00ffcc46;
 }
 
+/* ================== GUIDE ================== */
+.guides-section {
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.452);
+    color: #7300ff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #00ffcc;
+    margin: 50px 0;
+    max-width: 800px;
+    margin: 50px auto; /* Centra la sezione */
+    backdrop-filter: blur(3px); /* Aggiunge l'effetto di sfocatura */
+    -webkit-backdrop-filter: blur(3px); /* Supporto per Safari */
+}
+
+.guides-section .index {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 0 0 10px #00ffcc;
+}
+
+.guides-section .txt {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: justify;
+    text-shadow: 0 0 5px #00ffcc00;
+}
+
+.guides-section .collegamenti {
+    color: #ff00ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.guides-section .collegamenti:hover {
+    color: #00ffcc;
+}
+
+.guide-list {
+    margin-top: 30px;
+}
+
+.guide-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.379);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00ffcc;
+}
+
+.guide-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px #00ffcc00;
+}
+
+.guide-item p {
+    font-size: 1rem;
+    line-height: 1.4;
+    text-shadow: 0 0 3px #00ffcc00;
+}
+
 /* ================== RESPONSIVE DESIGN ================== */
 @media (max-width: 768px) {
     .navbar {
@@ -654,6 +716,30 @@ body.cyberpunk {
     }
 
     .project-item p {
+        font-size: 0.8rem;
+    }
+
+    .guide-section {
+        padding: 20px 10px;
+        margin: 10px 0;
+        max-width: 90%; /* Riduce la larghezza massima */
+        margin: 10px auto; /* Centra la sezione */
+        margin-top: 50px;
+    }
+
+    .guide-section .index {
+        font-size: 1.2rem;
+    }
+
+    .guide-section .txt {
+        font-size: 0.9rem;
+    }
+
+    .guide-item h3 {
+        font-size: 1rem;
+    }
+
+    .guide-item p {
         font-size: 0.8rem;
     }
 }
